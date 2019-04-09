@@ -32,6 +32,11 @@ fish_odds_mgr::fish_odds_mgr()
 	check_state();
 }
 
+void fish_odds_mgr::~fish_odds_mgr()
+{
+	
+}
+
 void fish_odds_mgr::heartbeat(double elapsed)
 {
 	m_odds_elapsed += elapsed;
