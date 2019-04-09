@@ -32,17 +32,6 @@ fish_odds_mgr::fish_odds_mgr()
 	check_state();
 }
 
-
-fish_odds_mgr::~fish_odds_mgr(void)
-{
-	for (auto it = m_fish_odds_map.begin(); it != m_fish_odds_map.end(); it++)
-	{
-		it->second->release();
-		delete it->second;
-		it->second = nullptr;
-	}
-}
-
 void fish_odds_mgr::heartbeat(double elapsed)
 {
 	m_odds_elapsed += elapsed;
